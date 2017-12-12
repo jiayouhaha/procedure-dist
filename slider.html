@@ -47,33 +47,37 @@
 	<script type="text/javascript" src='js/swiper-3.4.2.jquery.min.js'></script>
 	<script type="text/javascript" src='js/index.js'></script>
 	<script type="text/javascript">
-		var mySwiper = new Swiper(".swiper-container",{  
-<<<<<<< HEAD
-			direction:"horizontal",/*横向滑动*/  
-			loop:false,/*形成环路（即：可以从最后一张图跳转到第一张图*/  
-=======
+		var mySwiper = new Swiper(".swiper-container",{
 			direction:"horizontal",/*横向滑动 */
-			loop:true,/*形成环路（即：可以从最后一张图跳转到第一张图*/  
->>>>>>> 68970abcc5b13b14897875f191dad1a045aab474
-			pagination:".swiper-pagination",/*分页器*/  
+			loop:false,/*形成环路（即：可以从最后一张图跳转到第一张图*/
+			pagination:".swiper-pagination",/*分页器*/
 			prevButton:".swiper-button-prev",/*前进按钮*/  
 			nextButton:".swiper-button-next",/*后退按钮*/  
 			/*autoplay:3000每隔3秒自动播放*/  			
 			// 滑到最后一张图片时跳转到下一页
-			// onTouchEnd: function(swiper){
-			// 	TR=swiper.translate;
-			// 	var width=screen.width;
-			// 	if(TR<-(4*width+100)){
-			// 		swiper.setWrapperTranslate(TR);
-			// 		location.href ="download.html";
-			// 	};
-			// }
+			 onTouchEnd: function(swiper){
+			 	var TR=Math.abs(swiper.translate);
+			 	var width=screen.width;
+
+				 var num1=3*width+100,
+				 	num2=4*width+100;
+
+				 console.log('tr'+TR);
+				 console.log('num1：'+num1);
+				 console.log('num2：'+num2);
+
+			 	if(TR>num1 && TR<num2){
+					console.log('ok');
+//			 		swiper.setWrapperTranslate(TR);
+//			 		location.href ="download.html";
+			 	};
+			 }
 			
-			onTouchEnd:function(swiper){
-				if(swiper.activeIndex == 4){
-					location.href ="download.html";
-				}
-			}
+//			onTouchEnd:function(swiper){
+//				if(swiper.activeIndex == 4){
+//					location.href ="download.html";
+//				}
+//			}
 		})  	
 	</script>
 </body>
