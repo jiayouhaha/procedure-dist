@@ -10,13 +10,13 @@
 	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
 	<link rel="stylesheet" href="css/index.css">
 	<script type="text/javascript">
-		var _hmt = _hmt || [];
-		(function() {
-			var hm = document.createElement("script");
-			hm.src = "https://hm.baidu.com/hm.js?7428044703acb0f99c6cbed28ffc7a6c";
-			var s = document.getElementsByTagName("script")[0]; 
-			s.parentNode.insertBefore(hm, s);
-		})();
+//		var _hmt = _hmt || [];
+//		(function() {
+//			var hm = document.createElement("script");
+//			hm.src = "https://hm.baidu.com/hm.js?7428044703acb0f99c6cbed28ffc7a6c";
+//			var s = document.getElementsByTagName("script")[0];
+//			s.parentNode.insertBefore(hm, s);
+//		})();
 	</script>
 </head>
 <body>
@@ -59,17 +59,18 @@
 			 	var TR=Math.abs(swiper.translate);
 			 	var width=screen.width;
 
-				 var num1=3*width+100,
-				 	num2=4*width+100;
+				 var num1=3*width+10;
 
 				 console.log('tr'+TR);
 				 console.log('num1：'+num1);
-				 console.log('num2：'+num2);
 
-			 	if(TR>num1 && TR<num2){
+			 	if(TR>num1){
 					console.log('ok');
-//			 		swiper.setWrapperTranslate(TR);
-//			 		location.href ="download.html";
+//					mySwiper.setWrapperTranslate(0);
+					setSwiperToOrigin()
+					window.setTimeout(function(){
+						location.href ="download.html";
+					},100);
 			 	};
 			 }
 			
@@ -78,7 +79,15 @@
 //					location.href ="download.html";
 //				}
 //			}
-		})  	
+		});
+		function setSwiperToOrigin(){
+			window.setTimeout(function(){
+				mySwiper.setWrapperTranslate(0);
+				var $bullet=$('.swiper-pagination span');
+				$bullet.removeClass('swiper-pagination-bullet-active');
+				$bullet.eq(0).addClass('swiper-pagination-bullet-active');
+			},100);
+		};
 	</script>
 </body>
 </html>

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="705aabee-7b02-4cb4-86e7-81a51a06c158" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/slider.html" afterPath="$PROJECT_DIR$/slider.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="procedure-dist.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="slider.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/slider.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56318253">
-              <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.5319813">
+              <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#audio#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -177,14 +176,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/slider.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56318253">
-          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.5319813">
+          <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#audio#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
