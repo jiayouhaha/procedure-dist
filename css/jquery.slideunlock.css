@@ -28,8 +28,8 @@ body{
 #label{
     width: 40px;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 7px;
+    top: 4px;
     height: 100%;
     background: #E67E22;
     z-index: 999;
@@ -48,7 +48,6 @@ body{
         width: 64%;
     }
 }
-
 p{
     padding: 0 10px;
     word-wrap: break-word;

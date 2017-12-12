@@ -6,11 +6,18 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta name="x5-orientation" content="portrait">
 	<meta name="screen-orientation" content="portrait">
-	<!-- 页面自动刷新 -->
-	<!-- <meta http-equiv="refresh" content="5"> -->
 	<link href="http://dialer.cdn.cootekservice.com/web/sdk/reset/reset.css" rel="stylesheet" />
 	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
 	<link rel="stylesheet" href="css/index.css">
+	<script type="text/javascript">
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?7428044703acb0f99c6cbed28ffc7a6c";
+			var s = document.getElementsByTagName("script")[0]; 
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
 </head>
 <body>
 	<div class="swiper-container">
@@ -26,38 +33,43 @@
 			</div>
 			<div class="swiper-slide sliderDiv">
 				<img class="card" src="img/inset4.png">
+				<img src="img/arrow.png" alt="" id='arrow'>
 			</div>
 		</div>
 		<div class="swiper-pagination"></div>
 		<!-- <div class="swiper-button-prev"></div>
 		<div class="swiper-button-next"></div>	 -->
 	</div>
+	<audio autoplay='autoplay' loop='loop' id="audio" style="display: none">
+	<source src='img/musicTwo.mp3' type='audio/mpeg'></source>
+	</audio>
 	<script type="text/javascript" src='js/jquery-2.1.1.min.js'></script>
 	<script type="text/javascript" src='js/swiper-3.4.2.jquery.min.js'></script>
 	<script type="text/javascript" src='js/index.js'></script>
 	<script type="text/javascript">
 		var mySwiper = new Swiper(".swiper-container",{  
 			direction:"horizontal",/*横向滑动*/  
-			loop:true,/*形成环路（即：可以从最后一张图跳转到第一张图*/  
+			loop:false,/*形成环路（即：可以从最后一张图跳转到第一张图*/  
 			pagination:".swiper-pagination",/*分页器*/  
 			prevButton:".swiper-button-prev",/*前进按钮*/  
 			nextButton:".swiper-button-next",/*后退按钮*/  
-			/*autoplay:3000每隔3秒自动播放*/  
-			onTouchEnd: function(swiper){
-				TR=swiper.translate
-				if(TR<-1600){
-					swiper.setWrapperTranslate(TR);
+			/*autoplay:3000每隔3秒自动播放*/  			
+			// 滑到最后一张图片时跳转到下一页
+			// onTouchEnd: function(swiper){
+			// 	TR=swiper.translate;
+			// 	var width=screen.width;
+			// 	if(TR<-(4*width+100)){
+			// 		swiper.setWrapperTranslate(TR);
+			// 		location.href ="download.html";
+			// 	};
+			// }
+			
+			onTouchEnd:function(swiper){
+				if(swiper.activeIndex == 4){
 					location.href ="download.html";
-				};
+				}
 			}
-
-
-		})  
-
-		// function   GoTo(){   
-		// 	location.href="http://www.baidu.com/";   
-		// }   
-		// setTimeout(onTouchEnd(),5000);   
+		})  	
 	</script>
 </body>
 </html>

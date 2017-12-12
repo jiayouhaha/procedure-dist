@@ -164,7 +164,7 @@ SliderUnlock.prototype.reset = function () {
     var _self = this;
 
     _self.index = 0;
-    _self.elm.find("#label").animate({left: _self.index}, _self.opts.duration)
+    _self.elm.find("#label").animate({left: _self.index+'10px'}, _self.opts.duration)
         .next("#lableTip").animate({opacity: 1}, _self.opts.duration);
     _self.updateView();
 };
@@ -191,7 +191,7 @@ SliderUnlock.prototype.updateView = function () {
         _self.elm.addClass("success").find("#lableTip").html('滑动查看操作流程').css(style);
     } else {
         $("#lockable").val(0);
-        _self.elm.removeClass("success").find("#lableTip").html(_self.opts.labelTip);
+        _self.elm.removeClass("success").find("#lableTip").html('滑动查看操作流程');
     }
     _self.always();
 }

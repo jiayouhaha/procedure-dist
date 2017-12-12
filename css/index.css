@@ -6,25 +6,23 @@ html,body{
 	padding: 0;
 	margin: 0;
 	background: #00ACF6;
+	position:fixed;
 }
 
 /*第一页*/
 .bg{
 	width: 100%;
 	height: 100%;
-	/*height: 667px;*/
-	/*background:url('../img/lineTwo.png')  no-repeat;*/
 	background-repeat: no-repeat;
 	background-size:100% 100%;
 	z-index: 2;
-}
 
+}
 .middle{
 	margin: auto;
 	width: 100%;
 	height: 100%;
 }	
-
 .tel{
 	width: 100%;
 	height:38.6%;
@@ -32,8 +30,12 @@ html,body{
 	left:0;
 	position: absolute;
 }
-
-
+.ding{
+	position: absolute;
+	width: 88%;
+	top:40%;
+	left:13%;
+}
 
 .button{
 	width:18%;
@@ -43,7 +45,6 @@ html,body{
 	left:15%;
 }
 .p{
-	/*position: absolute;;*/
 	top:78.5%;
 	font-family: "微软雅黑";
 	font-weight: bold;
@@ -51,24 +52,21 @@ html,body{
 	font-size:0.21rem;
 	left:36%;
 	animation: shine_P_0_3 3s infinite linear;
-	margin-left: 14px;
+	margin-left:12%;
 	background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 40%, #FFF 50%, rgba(0, 0, 0, 0.6) 60%);
-	-webkit-background-clip: text;
+	-webkit-background-clip:text;
     -webkit-text-fill-color: transparent;
     background-size: 300%;
 }
-
 @keyframes shine_P_0_3{
 	0%{background-position: 100%;}
 	100%{background-position:0;}
-
 }
-
 .interface-box{
 	position: absolute;
-	bottom: 30px;
+	bottom: 0;
 	width: 100%;
-	min-height: 200px;
+	/*min-height: 200px;*/
 }
 .interface{
 	display: block;
@@ -77,19 +75,17 @@ html,body{
 
 .slider-box{
 	position: absolute;
-	bottom: 80px;
+	bottom: 90px;
 	width: 70%;
 	left: 50%;
 	transform:translate(-50%,0);
-
 }
-
 .my-slider{
-	// background: linear-gradient(to top right,#fff, #56AED5 50%,#fff) !important;
+	/*// background: linear-gradient(to top right,#fff, #56AED5 50%,#fff) !important*/;
 	background: linear-gradient(-60deg, #fff, #56AED5 50%, #fff);
-	line-height: 20px !important;
+	/*line-height: 20px !important;*/
 	border-radius: 40px !important;
-	padding: 20px 0 !important;
+	padding: 20px 0 20px 10px !important;
 }
 
 #label{
@@ -97,9 +93,6 @@ html,body{
 	height: 60px;
 	background-color: transparent !important;
 }
-
-
-
 
 /*第二页*/
 .swiper-container{
@@ -114,9 +107,17 @@ html,body{
 .swiper-pagination-bullet{
 	background: #fff;
 }
-
-
-
+#arrow{
+	width: 17%;
+	position: absolute;
+	bottom:0;
+	right:5%;
+	animation: arrow 1s infinite;
+}
+@keyframes arrow {
+	0%{right: 5%;}
+	100%{right: 0;}
+} 
 
 
 /*第三页*/
@@ -130,7 +131,6 @@ html,body{
 	width:100%;
 	height:78%;
 	margin: auto;
-	/*margin-top:30px;*/
 
 }
 .phone>img{
@@ -151,17 +151,7 @@ button{
 	background: #0065ED;
 }
 
-@media all and (max-width: 320px){
-	p{
-		left:34%;
-	}
-// 	#label{
-// 		height: 63%!important;
-// 		width: 23%!important;
-// 	}
-// 	#slider{
-// 		padding:16px 22px 57px 47px!important;
-// 	}
+@media all and (max-width: 320px){	
 	.slider-box{
 		bottom: 65px;
 	}
@@ -169,7 +159,11 @@ button{
 		// line-height: 10px !important;
 	}
 	.p{
-		font-size: 0.2rem;
+		font-size: 0.18rem;
+		margin-left: 50px;
+	}
+	.phone>img{
+		height: 125%;	
 	}
 }
 
